@@ -214,6 +214,7 @@ async def job(args):
     # 推送文章
     proxy_bot = conf['proxy']['url'] if conf['proxy']['bot'] else ''
     bots = await init_bot(conf['bot'], proxy_bot)
+    print(bots)
     for bot in bots:
         await bot.send(bot.parse_results(results))
 
